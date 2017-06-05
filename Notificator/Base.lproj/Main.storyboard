@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notificator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PFN-YR-mAb">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="jG6-SU-FIW"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="518364319.56017703">
+                                    <!--2017-06-05 14:05:19 +0000-->
+                                </date>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8M-eP-7Tw">
+                                <rect key="frame" x="0.0" y="308" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0eu-S8-tgo"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Set Notification" id="UJ3-rX-fNq">
+                                        <connections>
+                                            <action selector="setNotification:" destination="BYZ-38-t0r" id="FBF-e7-alp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="lDw-eT-EsD">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="30j-K6-vk3">
+                                            <rect key="frame" x="136" y="7" width="139" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Calendar"/>
+                                                <segment title="Timer"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="iUy-Ky-Tqk"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PFN-YR-mAb" secondAttribute="bottom" id="1Cl-E6-n1e"/>
+                            <constraint firstItem="W8M-eP-7Tw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="81P-Dr-hF8"/>
+                            <constraint firstAttribute="trailing" secondItem="PFN-YR-mAb" secondAttribute="trailing" id="FYY-DZ-eSQ"/>
+                            <constraint firstItem="PFN-YR-mAb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uaf-d0-6b2"/>
+                            <constraint firstAttribute="trailing" secondItem="W8M-eP-7Tw" secondAttribute="trailing" id="fGk-eZ-lLc"/>
+                            <constraint firstItem="PFN-YR-mAb" firstAttribute="top" secondItem="W8M-eP-7Tw" secondAttribute="bottom" id="lfH-DZ-ErN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="PFN-YR-mAb" id="Rdc-dZ-a0y"/>
+                        <outlet property="segmentedControl" destination="30j-K6-vk3" id="JB2-Ls-sJJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
